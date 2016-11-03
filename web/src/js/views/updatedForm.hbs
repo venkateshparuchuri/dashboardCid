@@ -1,0 +1,47 @@
+<div class="row" style="background-color: #45B0DB">
+    <center><h3>Recently Updated Data</h3></center>
+</div>
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr class="card">
+                <th>S.No</th>
+                <th>
+                    <center>Wing</center>
+                </th>
+                <th>Created Date</th>
+                <th>No of UI Cases</th>
+                <th>No of PT Cases</th>
+                <th>No of Petetion Inquiry</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each rows}}
+                <tr class="card">
+                    <td class="form-group mytable">
+                        {{#eachIndex @index}}
+                            {{value}}
+                        {{/eachIndex}}
+                    </td>
+                    <td class="form-group mytable">
+                        {{wing_name}}
+                    </td>
+                    <td class="form-group mytable">
+                        {{#convertDate created_date}}
+                            {{value}}
+                        {{/convertDate}}
+                    </td>
+                    <td class="form-group mytable">
+                        {{uin}}
+                    </td>
+                    <td class="form-group mytable">
+                        {{pt}}
+                    </td>
+                    <td class="form-group mytable">
+                        {{uiq}}
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

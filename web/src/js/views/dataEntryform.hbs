@@ -1,0 +1,48 @@
+<div class="row" style="margin-top: 40px;margin-left: 37px">
+    <div class="col-sm-11">
+        <table class="table">
+            <thead>
+                <tr class="card">
+                    <th>
+                        <center>Wing</center>
+                    </th>
+            <th><span style="width: 20px">Under Investigation<span></th>
+            <th>Pending Trails</th>
+            <th><span style="width: 20px">Under Inquiry<span></th>
+
+        </tr>
+    </thead>
+    <tbody class="js-tableBody">
+        <tr class="card">
+            <td style="width: 360px">
+                <center><select class="form-control js-select-wing"></select></center>
+            </td>
+            <td class="form-group mytable">
+                <input type="number" min=0 onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control js-order-investigation js-entryForm">
+            </td>
+            <td class="form-group mytable">
+                <input type="number" min=0 onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control js-order-pending js-entryForm">
+            </td>
+            <td class="form-group mytable">
+                <input type="number" min=0 onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control js-order-inquery js-entryForm">
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<div class="row">
+    <div class="col-sm-2 col-sm-offset-7">
+        <button class="btn btn--action btn-block js-unitData-save" data-loading-text="Loading...">Submit</button>
+    </div>
+    <div class="col-sm-2">
+       <button class="btn btn--dark btn-block js-unitData-reset" >Cancel</button>
+    </div>
+</div>
+<hr />
+
+<div class="row" style="margin-top: 40px;margin-left: 37px">
+<div class="col-sm-11 js-updatedUnitDataDiv">
+
+</div>
+</div>

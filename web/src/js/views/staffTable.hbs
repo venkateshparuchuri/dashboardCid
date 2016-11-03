@@ -1,0 +1,22 @@
+<div class="table-responsive">
+<table class="table">
+    <thead>
+        <tr class="card">
+            <th>Rank</th>
+            <th>Sanctioned</th>
+            <th>Actual</th>
+            <th>Vacancy</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each rows}}
+            <tr class="card">
+                <td>{{Rank}}</td>
+                <td>{{Sanctioned}}</td>
+                <td>{{Actual}}</td>
+                <td>{{Vacancy}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>

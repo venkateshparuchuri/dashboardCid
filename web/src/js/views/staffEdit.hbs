@@ -1,0 +1,43 @@
+
+
+            <div class="row" style="padding: 15px 30px;">
+                <div class="table-responsive">
+                  <table class="table" style="margin-bottom: 0px;">
+                    <thead>
+                        <tr class="card">
+                            <th>Grade</th>
+                            <th>Rank</th>
+                            <th>Sanctioned</th>
+                            <th>Actual</th>
+                            <th>Vacancy</th>
+                            <th>Order</th>
+                        </tr>
+                    </thead>
+                      <tbody>
+                        {{#each rows}}
+                          <tr class="card" data-staff-id="{{id}}">
+                            <td>
+                              {{grade}}
+                            </td>
+                            <td>
+                              {{rank}}
+                            </td>
+                              <td>
+                                <input type="text" class="form-control js-staff-input js-staff-sanctioned" data-staff-id="{{id}}" value="{{sanctioned}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-staff-input js-staff-actual" data-staff-id="{{id}}" value="{{actual}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-staff-input js-staff-vacancy" data-staff-id="{{id}}" value="{{vacancy}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-staff-input js-staff-order" data-staff-id="{{id}}" value="{{order_id}}" >
+                              </td>
+
+                          </tr>
+                          {{/each}}
+                      </tbody>
+                  </table>
+                </div>
+            </div>

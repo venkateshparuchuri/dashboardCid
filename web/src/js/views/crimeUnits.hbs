@@ -1,0 +1,37 @@
+<div class="panel-group" id="accordion24" style="padding: 20px 30px;">
+    {{#each rows}}
+        <div class="row" data-Grade="{{zone_trim}}" style="">
+            <div data-toggle="collapse" data-parent="#accordion24" href=#{{zone_trim}} style="cursor:pointer">
+               <div class="row" style="margin:10px 0; padding: 10px; background-color: white;">
+                 <div class="col-sm-3"><h2>{{zone_name}}</h2></div>
+                 <div class="col-sm-3"><h4> No of UI Cases: </h4><h2>{{uin}}</h2></div>
+                 <div class="col-sm-3"><h4> No of PT Cases: </h4><h2>{{pt}}</h2></div>
+                 <div class="col-sm-3"><h4> Petetion Inquiries: </h4><h2>{{uiq}}</h2></div>
+               </div>
+            </div>
+            <div id={{zone_trim}} class="panel-collapse collapse" role="tabpanel">
+              <table class="table table-responsive" style=" background-color: white">
+                  <thead>
+                    <tr>
+                      <th>Unit Name</th>
+                      <th>UIN</th>
+                      <th>PT</th>
+                      <th>Petetion Inquiries</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {{#each units}}
+                    <tr>
+                      <th>{{unit_name}}</th>
+                      <th>{{uin}}</th>
+                      <th>{{pt}}</th>
+                      <th>{{uiq}}</th>
+                    </tr>
+                  {{/each}}
+                  </tbody>
+              </table>
+
+            </div>
+        </div>
+    {{/each}}
+</div>

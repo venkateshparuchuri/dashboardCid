@@ -1,0 +1,63 @@
+
+
+            <div class="row" style="padding: 15px 30px;">
+                <div class="table-responsive">
+                  <table class="table" style="margin-bottom: 0px;">
+                    <thead>
+                        <tr class="card">
+                            <th style="border-left: solid;border-right: solid;border-color: #F5F5F5;">Type</th>
+                            <th style="border-left: solid;border-right: solid;border-color: #F5F5F5;">account_head</th>
+                            <th style="border-right: solid;border-color: #F5F5F5;">qtr_1</th>
+                            <th style="border-right: solid;border-color: #F5F5F5;">qtr_2</th>
+                            <th style="border-right: solid;border-color: #F5F5F5;">qtr_3</th>
+                            <th style="border-right: solid;border-color: #F5F5F5;">qtr_4</th>
+                            <th style="border-right: solid;border-color: #F5F5F5;">total_budget</th>
+                            <th style="border-right: solid;border-color: #F5F5F5;">total_expenditure</th>
+                            <th style="border-right: solid;border-color: #F5F5F5;">balance</th>
+                            <th style="border-right: solid;border-color: #F5F5F5;">Budget upto present Quarter</th>
+                            <th style="border-right: solid;border-color: #F5F5F5;">remarks</th>
+
+                        </tr>
+                    </thead>
+                      <tbody>
+                        {{#each rows}}
+                          <tr class="card" data-budget-id="{{id}}">
+                            <td>
+                              {{type}}
+                            </td>
+                              <td>
+                                {{account_head}}
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-budget-input js-budget-qtr1" data-budget-id="{{id}}" value="{{qtr_1}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-budget-input js-budget-qtr2" data-budget-id="{{id}}" value="{{qtr_2}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-budget-input js-budget-qtr3" data-budget-id="{{id}}" value="{{qtr_3}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-budget-input js-budget-qtr4" data-budget-id="{{id}}" value="{{qtr_4}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-budget-input js-budget-totalBudget" data-budget-id="{{id}}" value="{{total_budget}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-budget-input js-budget-expenditure" data-budget-id="{{id}}" value="{{total_expenditure}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-budget-input js-budget-balance" data-budget-id="{{id}}" value="{{balance}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-budget-input js-budget-uptoqtr" data-budget-id="{{id}}" value="{{budget_req_upto_qtr_2}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-budget-input js-budget-remarks" data-budget-id="{{id}}" value="{{remarks}}" >
+                              </td>
+                          </tr>
+                          {{/each}}
+                      </tbody>
+                  </table>
+                </div>
+            </div>

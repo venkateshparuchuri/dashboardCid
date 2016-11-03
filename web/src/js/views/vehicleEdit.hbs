@@ -1,0 +1,42 @@
+
+
+            <div class="row" style="padding: 15px 30px;">
+                <div class="table-responsive">
+                  <table class="table" style="margin-bottom: 0px;">
+                    <thead>
+                        <tr class="card">
+                            <th>Name of Officer</th>
+                            <th>Rank</th>
+                            <th>General No.</th>
+                            <th>Model</th>
+                            <th>Bearing No.</th>
+                            <th>Vehicle Condition</th>
+                        </tr>
+                    </thead>
+                      <tbody>
+                        {{#each rows}}
+                          <tr class="card" data-vehicle-id="{{id}}">
+                            <td>
+                              {{name_of_officer}}
+                            </td>
+                              <td>
+                                {{rank}}
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-vehicle-input js-vehicle-general" data-vehicle-id="{{id}}" value="{{general_no}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-vehicle-input js-vehicle-model" data-vehicle-id="{{id}}" value="{{model_of_vehicle}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-vehicle-input js-vehicle-bearing" data-vehicle-id="{{id}}" value="{{bearing_no}}" >
+                              </td>
+                              <td>
+                                <input type="text" class="form-control js-vehicle-input js-vehicle-condition" data-vehicle-id="{{id}}" value="{{condition_of_vehicle}}" >
+                              </td>
+                          </tr>
+                          {{/each}}
+                      </tbody>
+                  </table>
+                </div>
+            </div>

@@ -1,0 +1,35 @@
+<div class="panel-group" id="accordion25" style="padding: 20px 30px;">
+    {{#each rows}}
+        <div class="row">
+            <div data-toggle="collapse" id="js-{{wing_trim}}" data-parent="#accordion25" href=#{{wing_trim}} style="cursor:pointer">
+               <div class="row" style="margin:10px 0; padding: 10px; background-color: white;">
+                 <div class="col-sm-3"><h2>{{wing_name}}</h2></div>
+                 <div class="col-sm-3"><h4> No of UI Cases: </h4><h2>{{uin}}</h2></div>
+                 <div class="col-sm-3"><h4> No of PT Cases: </h4><h2>{{pt}}</h2></div>
+                 <div class="col-sm-3"><h4> Petetion Inquiries: </h4><h2>{{uiq}}</h2></div>
+               </div>
+            </div>
+            <div id={{wing_trim}} class="panel-collapse panel-group collapse" role="tabpanel">
+                {{#each zones}}
+
+                <div class="row">
+                <div data-toggle="collapse" data-parent="#js-{{wing_trim}}" href=#js-{{zone_trim}} style="cursor:pointer; margin:10px 0; padding: 10px; background-color: white;">
+                  <div class="col-sm-2"></div>
+                  <div class="col-sm-2"><h2>{{zone_name}}</h2></div>
+                  <div class="col-sm-2"><h4> No of UI Cases: </h4><h2>{{uin}}</h2></div>
+                  <div class="col-sm-2"><h4> No of PT Cases: </h4><h2>{{pt}}</h2></div>
+                  <div class="col-sm-2"><h4> Petetion Inquiries: </h4><h2>{{uiq}}</h2></div>
+                  <div class="col-sm-2"></div>
+                </div>
+                </div>
+
+
+              <div id="js-{{zone_trim}}" class="panel-collapse collapse" role="tabpanel">
+                  Hello
+              </div>
+
+                {{/each}}
+            </div>
+        </div>
+    {{/each}}
+</div>

@@ -1,0 +1,29 @@
+<div class="row"><h3>Vehicles</h3></div>
+<div class="row count" style="overflow: hidden">
+  {{#each rows}}
+      <div class="col-sm-4" style="margin-bottom: 10px">
+          <div class="count_num">
+            <ul>
+              <li><h4>RO Name : {{ro}}</h3></li>
+                <li>Vehicle count : {{count}}</li>
+                <li><hr /></li>
+                {{#if GOOD}}
+                <li>GOOD : {{GOOD}}</li>
+                {{/if}}
+                {{#if NEW}}
+                <li>NEW : {{NEW}}</li>
+                {{/if}}
+                {{#if FORCONDEMNATION}}
+                <li>FOR CONDEMNATION : {{FORCONDEMNATION}}</li>
+                {{/if}}
+                {{#if REPAIR}}
+                <li>REPAIR : {{REPAIR}}</li>
+                {{/if}}
+                {{#if OLD}}
+                <li>OLD : {{OLD}}</li>
+                {{/if}}
+              </ul>
+          </div>
+      </div>
+  {{/each}}
+</div>

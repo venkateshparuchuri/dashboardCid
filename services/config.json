@@ -1,0 +1,12 @@
+{
+    "environment": "dev",
+    "debug": true,
+    "dbhost": "104.236.123.150",
+    "dbname":"ciddashboard",
+    "dbuser":"nanda",
+    "dbpass":"nanda1$",
+    "logfile": "adgp_dashboard.log",
+    "logtime": "midnight",
+    "host" : "0.0.0.0",
+    "extracts_location": "/var/extracts"
+}

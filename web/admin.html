@@ -1,0 +1,100 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Employee or Manager Dashboard.">
+    <meta name="author" content="">
+    <title>Dashboard - Unit</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="dist/css/main.css" rel="stylesheet">
+    <link href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+    <style>
+    .main-r {
+        margin-left: 235px;
+    }
+
+    @media (max-width: 768px) {
+        .main-r {
+            margin-left: 0;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default visible-xs">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="margin-top: 24px;">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="padding: 0; height: 80px;"><img src="images/cid_ap_logo.png" alt="" style="width: 80px"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav aside-nav js-side-nav">
+                    <li class="active"><a href="#" data-url="cases">Dashboard</a></li>
+                    <li><a href="#" data-url="logout" class="logout" >Logout</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+    <div class="container-fluid no-left-padding">
+        <aside class="slideInLeft animated hidden-xs" style="background-color: #546679">
+            <div class="aside--logo">
+                <a href="/admin.html"><img src="images/cid_ap_logo.png" alt="" style="width: 150px"></a>
+            </div>
+            <ul class="aside-nav nav js-side-nav">
+                <li class="active"><a href="#" data-url="cases">Dashboard</a></li>
+                <li><a href="#" data-url="logout" class="logout">Logout</a></li>
+            </ul>
+        </aside>
+        <div class="row main-r" style="">
+            <div class="row" style="height: 60px;background-color: #45B0DB; margin: 0 0 0 -15px;">
+                <div class="col-sm-10 js-headingText">
+                    <center>
+                        <h2>CID - Dashbord</h2></center>
+                </div>
+                <div class="col-sm-2 js-unitName" style="margin-top: 20px;color: #2F2F93">
+                    <h4></h4></div>
+            </div>
+            <div class="row" id="js-dynamicDataDiv" style="margin: 25px">
+            </div>
+            <div class="row" id="js-budgetDashboardDiv" style="margin: 25px">
+            </div>
+            <div class="row" id="js-staffDataDiv" style="margin: 25px">
+            </div>
+            <div class="row" id="js-vehicleDashboardDiv" style="margin: 25px">
+            </div>
+        </div>
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+        <script src="/bower_components/handlebars/handlebars.js"></script>
+        <script src="/bower_components/moment/moment.js"></script>
+        <script src="/bower_components/moment-range/dist/moment-range.js"></script>
+        <script src="/bower_components/underscore/underscore.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+        <script src="/src/js/jquerypp.js"></script>
+        <script src="/src/js/interact.js"></script>
+        <script src="/src/js/pnotify.custom.min.js"></script>
+        <script src="/build/js/templates.js"></script>
+        <script src="/src/js/app.js"></script>
+        <script src="/src/js/cid-dashboard.js"></script>
+        <script>
+        $('.logout').on('click', function(ev) {
+            ev.preventDefault();
+            $.cookie('user', null);
+            document.location.href = '/';
+        });
+        </script>
+</body>
+
+</html>

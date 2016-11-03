@@ -1,0 +1,22 @@
+                <div class="table-responsive">
+                  <table class="table" style="margin-bottom: 0px;">
+                    <thead>
+                        <tr class="card">
+                            <th style="border-left: solid;border-right: solid;border-color: #F5F5F5;">Account Head</th>
+                            <th style="border-right: solid;border-color: #F5F5F5;">Total Budget</th>
+                            <th style="border-right: solid;border-color: #F5F5F5;">Total Expenditure</th>
+                            <th style="border-right: solid;border-color: #F5F5F5;">Balance</th>
+                        </tr>
+                    </thead>
+                      <tbody>
+                        {{#each rows}}
+                          <tr class="card">
+                              <td style="border-left: solid;border-right: solid;border-color: #F5F5F5;">{{account_head}}</td>
+                              <td style="border-right: solid;border-color: #F5F5F5;">{{total_budget}}</td>
+                              <td style="border-right: solid;border-color: #F5F5F5;">{{total_expenditure}}</td>
+                              <td style="border-right: solid;border-color: #F5F5F5;">{{balance}}</td>
+                          </tr>
+                          {{/each}}
+                      </tbody>
+                  </table>
+                </div>

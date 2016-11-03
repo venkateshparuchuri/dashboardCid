@@ -1,0 +1,23 @@
+<div class="row"><h3>Budget</h3></div>
+<div id="accordion" role="tablist" aria-multiselectable="true">
+<div class="panel panel-default panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href=#loadingIcon aria-expanded="true" aria-controls="collapseOne">
+          <div class="row count">
+            {{#each rows}}
+              <div class="col-sm-3 js-budgetHeaders" data-type="{{type}}">
+                  <div class="count_num">
+                        <ul>
+                        <li><h3>{{type}}<hr/></h3></li>
+                        <li><h4>Total Budget:{{total_budget}}</h4></li>
+                        <li><h4>Total Expenditure:{{total_expenditure}}</h4></li>
+                        <li><h4>Balance:{{balance}}</h4></li>
+                      </ul>
+                  </div>
+              </div>
+              {{/each}}
+          </div>
+          <div id="loadingIcon" class="row count panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" style="background-color: #D5D0CF">
+                <div class="js-budgetelabarate">
+                </div>
+          </div>
+</div>
+</div>

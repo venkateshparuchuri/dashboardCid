@@ -1,0 +1,48 @@
+<div id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="row"><h3>Crime</h3></div>
+    <div class="panel panel-default">
+      {{#each rows}}
+        <div class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="cursor:pointer">
+            <div class="row count">
+                <div class="col-sm-4">
+                    <div class="count_num">
+                        <center><h3>No of UI Cases<hr /></h3><h1><span>{{uin}}</span></h1></center>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="count_num">
+                        <center><h3>No of PT Cases<hr /></h3><h1><span>{{pt}}</span></h1></center>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="count_num">
+                        <center><h3>No of Petition Inquiries<hr /></h3><h1><span>{{uiq}}</span></h1><center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" style="background-color: #D5D0CF">
+           <div class="row">
+             <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                  <center><h2>Zone wise</h2></center>
+                </div>
+             </div>
+             <div class="col-sm-12 js-crimeUnitsTable" style="margin-top: 20px">
+
+             </div>
+           </div>
+           <div class="row">
+              <div class="row">
+                 <div class="col-sm-10 col-sm-offset-1">
+                    <center><h2>Wing wise</h2></center>
+                 </div>
+              </div>
+              <div class="col-sm-12 js-crimeWingsTable" style="margin-top: 20px">
+
+              </div>
+           </div>
+        </div>
+    </div>
+</div>

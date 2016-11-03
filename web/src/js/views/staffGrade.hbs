@@ -1,0 +1,17 @@
+<div class="panel-group" id="accordion21" style="padding: 20px 30px;">
+    {{#each rows}}
+        <div class="row js-graderRows" data-Grade="{{Grade}}" style="">
+            <div data-toggle="collapse" data-parent="#accordion21" href=#{{Grade}} style="cursor:pointer">
+               <div class="row" style="margin:10px 0; padding: 10px; background-color: white;">
+                  <div class="col-sm-3"><h2>{{Grade}}</h2></div>
+                  <div class="col-sm-3"><h4>Total Sanctioned:</h4><h2>{{Sanctioned}}<h2></div>
+                  <div class="col-sm-3"><h4>Total Actual:</h4><h2>{{Actual}}<h2></div>
+                  <div class="col-sm-3"><h4>Total Vacancy:</h4><h2>{{Vacancy}}</h2></div>
+               </div>
+            </div>
+            <div id={{Grade}} class="panel-collapse collapse js-gradeTabBody" role="tabpanel" style="background-color: #D5D0CF">
+
+            </div>
+        </div>
+    {{/each}}
+</div>
